@@ -4,7 +4,7 @@ import com.model.Route;
 import com.model.Service;
 import com.model.Step;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.FileSystemXmlApplicationContext;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.List;
 public class Demo {
     public static void main(String[] args) {
 
-        ApplicationContext context = new AnnotationConfigApplicationContext("com.model");
+        ApplicationContext context = new FileSystemXmlApplicationContext("src/main/webapp/WEB-INF/spring-servlet.xml");
 
         Service service1 = context.getBean(Service.class);
             service1.setId(1L);
@@ -44,7 +44,9 @@ public class Demo {
             route.setSteps(list);
 
         //теперь так же по очереди вызвать геттеры? или что? ..
-
+        System.out.println(route.getId());
+        System.out.println(service1.getId());
+        System.out.println(step1.getId());
 
     }
 }
