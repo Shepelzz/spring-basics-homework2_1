@@ -7,6 +7,11 @@ public class Route {
     private String id;
     private List<Step> steps;
 
+    public Route(String id, List<Step> steps) {
+        this.id = id;
+        this.steps = steps;
+    }
+
     public String getId() {
         return id;
     }
@@ -21,5 +26,13 @@ public class Route {
 
     public void setSteps(List<Step> steps) {
         this.steps = steps;
+    }
+
+    @Override
+    public String toString() {
+        return "Route{" +
+                "id='" + id + '\'' +
+                ", steps=[" + steps.toString() + "]"+
+                '}';
     }
 }

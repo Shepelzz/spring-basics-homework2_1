@@ -8,6 +8,12 @@ public class Service {
     private String name;
     private List paramsToCall;
 
+    public Service(Long id, String name, List paramsToCall) {
+        this.id = id;
+        this.name = name;
+        this.paramsToCall = paramsToCall;
+    }
+
     public Long getId() {
         return id;
     }
@@ -30,5 +36,14 @@ public class Service {
 
     public void setParamsToCall(List paramsToCall) {
         this.paramsToCall = paramsToCall;
+    }
+
+    @Override
+    public String toString() {
+        return "Service{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", paramsToCall=[" + paramsToCall.toString() + "]"+
+                '}';
     }
 }

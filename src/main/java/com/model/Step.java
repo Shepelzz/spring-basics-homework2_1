@@ -10,6 +10,14 @@ public class Step {
     private Map paramsServiceFrom;
     private Map paramsServiceTo;
 
+    public Step(Long id, Service serviceFrom, Service serviceTo, Map paramsServiceFrom, Map paramsServiceTo) {
+        this.id = id;
+        this.serviceFrom = serviceFrom;
+        this.serviceTo = serviceTo;
+        this.paramsServiceFrom = paramsServiceFrom;
+        this.paramsServiceTo = paramsServiceTo;
+    }
+
     public Long getId() {
         return id;
     }
@@ -48,5 +56,16 @@ public class Step {
 
     public void setParamsServiceTo(Map paramsServiceTo) {
         this.paramsServiceTo = paramsServiceTo;
+    }
+
+    @Override
+    public String toString() {
+        return "Step{" +
+                "id=" + id +
+                ", serviceFrom=" + serviceFrom.toString() +
+                ", serviceTo=" + serviceTo.toString() +
+                ", paramsServiceFrom=" + paramsServiceFrom.toString() +
+                ", paramsServiceTo=" + paramsServiceTo.toString() +
+                '}';
     }
 }
