@@ -43,7 +43,7 @@ public class Service {
         return "Service{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", paramsToCall=[" + paramsToCall.toString() + "]"+
+                ", paramsToCall=" + paramsToCall.toString() +
                 '}';
     }
 }

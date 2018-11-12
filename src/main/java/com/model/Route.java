@@ -32,7 +32,7 @@ public class Route {
     public String toString() {
         return "Route{" +
                 "id='" + id + '\'' +
-                ", steps=[" + steps.toString() + "]"+
+                ", steps=" + steps.toString() +
                 '}';
     }
 }

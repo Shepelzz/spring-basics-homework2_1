@@ -14,7 +14,7 @@ public class Controller {
 
     @RequestMapping(method = RequestMethod.GET, value = "/test", produces = "text/plan")
     public @ResponseBody
-    String getFields() {
+    String callByBean() {
         try {
             return route.toString();
         }catch (Exception e){
